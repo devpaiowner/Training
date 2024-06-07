@@ -1,0 +1,334 @@
+/* .p_img h4 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: #000000;
+    margin-top: 17px;
+} */
+
+.menu .app-brand.demo {
+    height: 64px;
+}
+
+.menu .app-brand.demo {
+    height: 64px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+/* 
+.light-style .bs-stepper {
+  background-color: #fff !important;
+} */
+.user_profile_edit_form.bs-stepper
+    .step.crossed
+    .step-trigger
+    .bs-stepper-circle {
+    background-color: #f6b100 !important;
+    color: #fff !important;
+}
+.user_profile_edit_form.bs-stepper .step.active .bs-stepper-circle {
+    background-color: #f6b100;
+    color: #fff;
+    border-radius: 50px;
+}
+.light-style
+    .bs-stepper
+    .bs-stepper-header
+    .step:not(.active)
+    .bs-stepper-circle {
+    background-color: #f1f0f2 !important;
+    color: #6f6b7d;
+    border-radius: 50px;
+}
+
+.bs-stepper-pane:not(.fade),
+.bs-stepper .content:not(.fade) {
+    display: block !important;
+}
+
+.user_profile_edit_form.bs-stepper
+    .step.crossed
+    .step-trigger
+    .bs-stepper-circle {
+    background-color: #f6b100 !important;
+    color: #fff !important;
+}
+
+.user_profile_edit_form.bs-stepper .step.active .bs-stepper-circle {
+    background-color: #f6b100 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+}
+
+.bs-stepper .bs-stepper-header .step .bs-stepper-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #f6b100;
+}
+
+.bs-stepper-circle {
+    border-radius: 22.5px !important;
+}
+
+.user_profile_edit_form {
+    background: #fff !important;
+}
+
+.bs-stepper-header {
+    border-bottom: 1px solid #dbdade !important;
+}
+
+/* .modal-open .modal {
+    background: rgba(0, 0, 0, 0.5) !important;
+} */
+
+/* #upload_button {
+  display: inline-block;
+}
+#upload_button input[type=file] {
+  display:none;
+} */
+
+.fa-asterisk {
+    color: red;
+    position: absolute;
+    right: -14px;
+    top: -8px;
+    font-size: 30px;
+}
+
+.link-pointer {
+    cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.dropdown-menu-lang {
+    --bs-position: end !important;
+}
+.dropdown-menu-lang[data-bs-popper] {
+    left: auto !important;
+}
+[dir="rtl"] .dropdown-menu-lang {
+    --bs-position: end !important;
+}
+[dir="rtl"] .dropdown-menu-lang[data-bs-popper] {
+    left: 0 !important;
+    right: auto !important;
+}
+
+.sq-icon {
+    line-height: 45px !important;
+}
+
+.voter {
+    color: #ea5455;
+    font-size: 85%;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+
+.card input.viewamount,
+.card input.viewamount:focus {
+    border: none !important;
+    text-align: left !important;
+    outline: none;
+    padding: 0 !important;
+    pointer-events: none;
+    background: none;
+}
+
+.modal input.viewamount,
+.modal input.viewamount:focus {
+    border: none !important;
+    text-align: left !important;
+    outline: none;
+    padding-left: 0 !important;
+    pointer-events: none;
+}
+
+/* .card .table td input,
+.card .table td input:focus {
+    border: none !important;
+    outline: none;
+    text-align: left !important;
+} */
+
+/* .doc-upload {
+    margin-right: 30px;
+} */
+
+/* .swiper-container {
+    width: 480px;
+}
+
+@media screen and (min-width: 640px) {
+    .swiper-container {
+        width: 640px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .swiper-container {
+        width: 768px;
+    }
+} */
+
+.modal-body table td,
+.modal-body table th {
+    padding: 1.25rem;
+    text-align: left;
+}
+.modal-body table td {
+    border-bottom: 1px solid #dbdade;
+}
+.modal-body table td small,
+.modal-body table td span {
+    padding: 0;
+}
+.modal input.viewamount {
+    padding: 0px !important;
+    width: 100%;
+}
+
+.head-search .mt-4 {
+    margin-top: 1.45rem !important;
+}
+.head-search .btn.btn-blue {
+    line-height: 0.85;
+}
+
+.head-search .search-input .input_icon {
+    width: 5%;
+}
+
+.required_star {
+    color: red;
+    position: absolute;
+    bottom: 0px;
+}
+
+.form-label-group.input-group .error {
+    flex: 100% !important;
+    text-align: right;
+}
+
+@media screen and (min-width: 1800px) {
+    .choose-credit .credit:nth-last-child(2).mt-4 {
+        margin-top: 0 !important;
+    }
+}
+
+.card form .error.postion-static {
+    margin-top: -5px;
+}
+
+.blue-card input.viewamount {
+    background: none;
+    color: #f6b100;
+}
+
+@media screen and (max-width: 1499px) {
+    .blue-card input.viewamount {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 1299px) {
+    .blue-card input.viewamount {
+        font-size: 1.5rem;
+    }
+    .blue-card .bcrd-right .btn {
+        padding: 0.6rem 1rem !important;
+    }
+}
+@media screen and (max-width: 799px) {
+    .blue-card .bcrd-right .btn {
+        width: 80%;
+    }
+}
+
+/* .modal-open .modal {
+    background: rgba(0, 0, 0, 0.65) !important;
+} */
+
+.docform .form-group.form_box .input_icon {
+    top: 12px !important;
+}
+
+.card .text-success input.viewamount {
+    color: rgb(43, 200, 113);
+    font-weight: normal;
+}
+
+.card .blue-progress input.viewamount,
+.card .blue-progress input.viewamount:focus {
+    color: #5a6265;
+    font-weight: normal;
+}
+
+.pb-15 {
+    padding-bottom: 15rem;
+}
+
+.form-label-group.input-group:focus-within {
+    box-shadow: none;
+}
+
+.bank-form .error {
+    margin-top: -17px;
+    margin-bottom: 15px;
+}
+
+.no-space {
+    white-space: nowrap;
+}
+
+.input-group .form-control.wd-60 {
+    width: 60% !important;
+}
+
+#account-details .input-group .form-select {
+    color: #000;
+    border-color: #012e3c !important;
+}
+.dropdown-menu .icon-create {
+    display: inline-block;
+    width: 12px;
+    text-align: center;
+}
+
+.showpayment td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.doc-upload .d-flex span b {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.link_disabled{
+    pointer-events: none;
+  }

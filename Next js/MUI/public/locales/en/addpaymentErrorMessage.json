@@ -1,0 +1,10 @@
+{
+  "installment_date": "This field is mandatory.",
+  "proof_payment_doc": "This field is mandatory.",
+  "payment_mode": "This field is mandatory.",
+  "create_payment_note": "This field is mandatory.",
+  "amount_paying": "This field is mandatory.",
+  "description": "This field is mandatory.",
+  "amount_due": "This field is mandatory.",
+  "loan_application_id": "This field is mandatory."
+}

@@ -1,0 +1,579 @@
+ul {
+	margin: 0px;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $regular;
+	color: $black-100 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $regular;
+	font-weight: 600;
+}
+
+figure {
+	margin: 0px;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: none;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		color: $primary;
+	}
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+	width: auto;
+	outline: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+
+%btn-style {
+	border: none;
+	font-weight: 600;
+	padding: 15px 20px;
+}
+
+%gradient {
+	background: linear-gradient(to bottom, rgba($black, 1) 0%, rgba($black-700, 1) 100%);
+}
+
+.btn-success,
+.btn-danger {
+	@extend %btn-style;
+}
+
+.savefile {
+	background-color: #8638FE;
+	@extend %btn-style;
+	color: #fff;
+	@include border-radius (4px);
+}
+
+.btn-primary {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#667eea+0,764ba2+100 */
+	// background: linear-gradient(to bottom,  rgba(102,126,234,1) 0%,rgba(118,75,162,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	@extend %btn-style;
+	background-color: $black-700;
+
+	&:hover,
+	&:focus {
+		background-color: $black-600;
+	}
+}
+
+.btn-secoundry {
+	background-color: $black-800;
+	border: 1px solid $black-800;
+	padding: 0.875rem 0.75rem 0.875rem;
+	color: #fff;
+
+	img {
+		margin-right: .5rem;
+	}
+
+	&:hover,
+	&:focus {
+		color: #fff;
+	}
+}
+
+.btn-link {
+	color: $primary;
+	position: relative;
+	text-decoration: none;
+	font-weight: 600;
+
+	&:after {
+		content: "";
+		width: 63px;
+		height: 2px;
+		background-color: $primary;
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		right: 0;
+	}
+
+	&:focus,
+	&:hover {
+		color: $primary;
+		outline: none;
+		box-shadow: none
+	}
+}
+
+.btn-outline-primary {
+	border: 1px solid #5866AD;
+	@extend %btn-style;
+
+	&:hover {
+		background-color: $primary  !important;
+		color: #fff;
+	}
+}
+
+.btn-outline-light {
+	font-weight: 600;
+
+	&:hover {
+		color: #000;
+	}
+}
+
+.btn-outline-secoundry {
+	background-color: $black-800;
+	border: 1px solid $black-800;
+	@extend %btn-style;
+	color: #fff;
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.btnPUrpel {
+	@extend %btn-style;
+	background-color: #667DE9;
+	color: #fff;
+}
+
+.btnBlue {
+	@extend %btn-style;
+	background-color: #0637FA;
+	color: #fff;
+	@include border-radius (10px);
+}
+
+.bg-primary {
+	background-color: $primary  !important;
+}
+
+.bg-secoundry1 {
+	background-color: $secoundry  !important;
+}
+
+.bg-gredient {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,12294a+100&0+0,1+100 */
+	// background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(18,41,74,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-color: $black-900;
+}
+
+.bg-gredient1 {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#010235+0,0f223d+51,0f223d+100 */
+	// background: linear-gradient(to bottom,  rgba(1,2,53,1) 0%,rgba(15,34,61,1) 51%,rgba(15,34,61,1) 100%);
+	background-color: $black-900;
+
+}
+
+.bg-blue {
+	background-color: #010234;
+}
+
+.color-p {
+	color: $primary  !important;
+}
+
+.light-b {
+	color: $light-b  !important;
+}
+
+// font-size
+.f-12 {
+	font-size: 12px !important;
+}
+
+.f-14 {
+	font-size: 14px !important;
+}
+
+.f-16 {
+	font-size: 16px !important;
+}
+
+.f-18 {
+	font-size: 18px !important;
+}
+
+.f-20 {
+	font-size: 20px !important;
+}
+
+.f-22 {
+	font-size: 22px !important;
+}
+
+.f-24 {
+	font-size: 24px !important;
+}
+
+.f-26 {
+	font-size: 26px !important;
+}
+
+.f-28 {
+	font-size: 28px !important;
+}
+
+.f-30 {
+	font-size: 30px !important;
+}
+
+.f-32 {
+	font-size: 32px !important;
+}
+
+.f-34 {
+	font-size: 34px !important;
+}
+
+// font-weight
+.fw-200 {
+	font-weight: 200;
+}
+
+.fw-300 {
+	font-weight: 300;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+
+.fw-500 {
+	font-weight: 500;
+}
+
+.fw-600 {
+	font-weight: 600;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+.fw-800 {
+	font-weight: 800;
+}
+
+.fw-900 {
+	font-weight: 900;
+}
+
+// padding top
+.pt-10 {
+	padding-top: 10px;
+}
+
+.pt-20 {
+	padding-top: 20px;
+}
+
+.pt-30 {
+	padding-top: 30px;
+}
+
+.pt-40 {
+	padding-top: 40px;
+}
+
+.pt-50 {
+	padding-top: 50px;
+}
+
+.pt-60 {
+	padding-top: 60px;
+}
+
+.pt-70 {
+	padding-top: 70px;
+}
+
+.pt-80 {
+	padding-top: 80px;
+}
+
+.pt-90 {
+	padding-top: 90px;
+}
+
+.pt-100 {
+	padding-top: 100px;
+}
+
+.pt-110 {
+	padding-top: 110px;
+}
+
+.pt-120 {
+	padding-top: 120px;
+}
+
+// padding bottom
+.pb-10 {
+	padding-bottom: 10px;
+}
+
+.pb-20 {
+	padding-bottom: 20px;
+}
+
+.pb-30 {
+	padding-bottom: 30px;
+}
+
+.pb-40 {
+	padding-bottom: 40px;
+}
+
+.pb-50 {
+	padding-bottom: 50px;
+}
+
+.pb-60 {
+	padding-bottom: 60px;
+}
+
+.pb-70 {
+	padding-bottom: 70px;
+}
+
+.pb-80 {
+	padding-bottom: 80px;
+}
+
+.pb-90 {
+	padding-bottom: 90px;
+}
+
+.pb-100 {
+	padding-bottom: 100px;
+}
+
+.pb-110 {
+	padding-bottom: 110px;
+}
+
+.pb-120 {
+	padding-bottom: 120px;
+}
+
+.py-80 {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+// margin top
+.mt-10 {
+	margin-top: 10px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mt-30 {
+	margin-top: 30px;
+}
+
+.mt-40 {
+	margin-top: 40px;
+}
+
+.mt-50 {
+	margin-top: 50px;
+}
+
+.mt-60 {
+	margin-top: 60px;
+}
+
+.mt-70 {
+	margin-top: 70px;
+}
+
+.mt-80 {
+	margin-top: 80px;
+}
+
+.mt-90 {
+	margin-top: 90px;
+}
+
+.mt-100 {
+	margin-top: 100px;
+}
+
+.mt-120 {
+	margin-top: 120px;
+}
+
+// margin bottom
+.mb-10 {
+	margin-bottom: 10px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.mb-30 {
+	margin-bottom: 30px;
+}
+
+.mb-40 {
+	margin-bottom: 40px;
+}
+
+.mb-50 {
+	margin-bottom: 50px;
+}
+
+.mb-60 {
+	margin-bottom: 60px;
+}
+
+.mb-70 {
+	margin-bottom: 70px;
+}
+
+.mb-80 {
+	margin-bottom: 80px;
+}
+
+.mb-90 {
+	margin-bottom: 90px;
+}
+
+.mb-100 {
+	margin-bottom: 100px;
+}
+
+.mb-120 {
+	margin-bottom: 120px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.countrySelect {
+	width: auto;
+}
+
+
+.radioCheck {
+	.form-check {
+		padding-left: 2.5em;
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+		font-size: 17px;
+		font-weight: 600;
+		color: #2D364E;
+
+		.form-check-input {
+			border: 3px solid #DDDDDD;
+			width: 2rem;
+			min-width: 2rem;
+			height: 2rem;
+			margin-left: -2.5em;
+			margin-right: .5rem;
+
+			&:checked[type=radio] {
+				background-color: $primary;
+				border-color: $primary;
+			}
+
+		}
+
+		@media (max-width:768px) {
+			font-size: 1rem;
+		}
+	}
+}
+
+@media (min-width:992px) {
+	.container-fluid {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (min-width:1200px) {
+	.container-fluid {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+}
+
+@media (min-width:1500px) {
+	.container-fluid {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}

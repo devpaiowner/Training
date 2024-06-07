@@ -1,0 +1,269 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Bold.eot');
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+      url('../fonts/Montserrat-Bold.woff') format('woff'),
+      url('../fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: 'Montserrat';
+//   src: url('../fonts/Montserrat-ExtraBold.eot');
+//   src: url('../fonts/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+//       url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+//       url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
+//       url('../fonts/Montserrat-ExtraBold.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Black.eot');
+  src: url('../fonts/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Black.woff2') format('woff2'),
+      url('../fonts/Montserrat-Black.woff') format('woff'),
+      url('../fonts/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Medium.eot');
+  src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+      url('../fonts/Montserrat-Medium.woff') format('woff'),
+      url('../fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Light.eot');
+  src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Light.woff2') format('woff2'),
+      url('../fonts/Montserrat-Light.woff') format('woff'),
+      url('../fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-ExtraLight.eot');
+  src: url('../fonts/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-ExtraLight.woff2') format('woff2'),
+      url('../fonts/Montserrat-ExtraLight.woff') format('woff'),
+      url('../fonts/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBold.eot');
+  src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+      url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+      url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+      url('../fonts/Montserrat-Regular.woff') format('woff'),
+      url('../fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Thin.eot');
+  src: url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+      url('../fonts/Montserrat-Thin.woff') format('woff'),
+      url('../fonts/Montserrat-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+// icons 
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?oto2pg');
+  src:  url('../fonts/icomoon.eot?oto2pg#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?oto2pg') format('truetype'),
+    url('../fonts/icomoon.woff?oto2pg') format('woff'),
+    url('../fonts/icomoon.svg?oto2pg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clock:before {
+  content: "\e92b";
+}
+.icon-ellipsis:before {
+  content: "\e92a";
+}
+.icon-profile:before {
+  content: "\e927";
+}
+.icon-wallet-2:before {
+  content: "\e928";
+}
+.icon-coupon:before {
+  content: "\e929";
+}
+.icon-heart-fill:before {
+  content: "\e926";
+}
+.icon-time-past:before {
+  content: "\e925";
+}
+.icon-edit-2:before {
+  content: "\e923";
+}
+.icon-star-outline:before {
+  content: "\e922";
+}
+.icon-copy:before {
+  content: "\e924";
+}
+.icon-message:before {
+  content: "\e917";
+}
+.icon-star:before {
+  content: "\e918";
+}
+.icon-call:before {
+  content: "\e919";
+}
+.icon-send:before {
+  content: "\e91a";
+}
+.icon-delete:before {
+  content: "\e91b";
+}
+.icon-logout:before {
+  content: "\e91c";
+}
+.icon-upload:before {
+  content: "\e91d";
+}
+.icon-card:before {
+  content: "\e91e";
+}
+.icon-van:before {
+  content: "\e91f";
+}
+.icon-exclamation:before {
+  content: "\e920";
+}
+.icon-question:before {
+  content: "\e921";
+}
+.icon-calendar:before {
+  content: "\e914";
+}
+.icon-user-2:before {
+  content: "\e915";
+}
+.icon-edit:before {
+  content: "\e916";
+}
+.icon-close-circle:before {
+  content: "\e913";
+}
+.icon-eye-disabled:before {
+  content: "\e90e";
+}
+.icon-eye:before {
+  content: "\e90f";
+}
+.icon-lock:before {
+  content: "\e910";
+}
+.icon-envelope:before {
+  content: "\e911";
+}
+.icon-phone:before {
+  content: "\e912";
+}
+.icon-chev-right:before {
+  content: "\e906";
+}
+.icon-wallet:before {
+  content: "\e907";
+}
+.icon-support:before {
+  content: "\e909";
+}
+.icon-user:before {
+  content: "\e90a";
+}
+.icon-heart:before {
+  content: "\e90b";
+}
+.icon-settings:before {
+  content: "\e90c";
+}
+.icon-ride:before {
+  content: "\e903";
+}
+.icon-location:before {
+  content: "\e904";
+}
+.icon-pickup:before {
+  content: "\e902";
+}
+.icon-chev-btm:before {
+  content: "\e905";
+}
+.icon-bell:before {
+  content: "\e90d";
+}
+.icon-car:before {
+  content: "\e908";
+}
+.icon-shield:before {
+  content: "\e900";
+}
+.icon-file:before {
+  content: "\e901";
+}
