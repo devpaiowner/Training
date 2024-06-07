@@ -21,7 +21,7 @@ const MessageConstant_1 = require("../../constants/MessageConstant");
 const bcrypt = require("bcrypt");
 const HttpConstant_1 = require("../../constants/HttpConstant");
 const user_response_1 = require("./user.response");
-const user_login_dto_1 = require("./dto/user-login.dto");
+const auth_input_1 = require("./dto/auth.input");
 let AuthResolver = class AuthResolver {
     constructor(authService) {
         this.authService = authService;
@@ -33,9 +33,9 @@ let AuthResolver = class AuthResolver {
             if (userExist) {
                 return {
                     data: [],
-                    status: HttpConstant_1.Status === null || HttpConstant_1.Status === void 0 ? void 0 : HttpConstant_1.Status.STATUS_FALSE,
-                    message: email + " " + (MessageConstant_1.MessageConstant === null || MessageConstant_1.MessageConstant === void 0 ? void 0 : MessageConstant_1.MessageConstant.IS_ALREADY_EXITS),
-                    status_code: HttpConstant_1.StatusCode === null || HttpConstant_1.StatusCode === void 0 ? void 0 : HttpConstant_1.StatusCode.HTTP_VALIDATION,
+                    status: HttpConstant_1.Status.STATUS_FALSE,
+                    message: `${email} ${MessageConstant_1.MessageConstant.IS_ALREADY_EXITS}`,
+                    status_code: HttpConstant_1.StatusCode.HTTP_VALIDATION,
                 };
             }
             else {
@@ -43,24 +43,24 @@ let AuthResolver = class AuthResolver {
                 const user = await this.authService.createOne(username, email, hashPassword);
                 return {
                     data: [user],
-                    status: HttpConstant_1.Status === null || HttpConstant_1.Status === void 0 ? void 0 : HttpConstant_1.Status.STATUS_TRUE,
-                    message: MessageConstant_1.MessageConstant === null || MessageConstant_1.MessageConstant === void 0 ? void 0 : MessageConstant_1.MessageConstant.SIGN_UP_SUCCESSFULLY,
-                    status_code: HttpConstant_1.StatusCode === null || HttpConstant_1.StatusCode === void 0 ? void 0 : HttpConstant_1.StatusCode.HTTP_CREATED,
+                    status: HttpConstant_1.Status.STATUS_TRUE,
+                    message: MessageConstant_1.MessageConstant.SIGN_UP_SUCCESSFULLY,
+                    status_code: HttpConstant_1.StatusCode.HTTP_CREATED,
                 };
             }
         }
         catch (error) {
             console.log('error', error);
-            await (0, ErrorHandler_1.CatchErrorResponseHelper)(error);
+            return (0, ErrorHandler_1.CatchErrorResponseHelper)(error);
         }
     }
     async user() {
         const users = await this.authService.listAll();
         return {
             data: users,
-            status: HttpConstant_1.Status === null || HttpConstant_1.Status === void 0 ? void 0 : HttpConstant_1.Status.STATUS_TRUE,
-            message: MessageConstant_1.MessageConstant === null || MessageConstant_1.MessageConstant === void 0 ? void 0 : MessageConstant_1.MessageConstant.DATA_RETRIEVED_SUCCESSFULLY,
-            status_code: HttpConstant_1.StatusCode === null || HttpConstant_1.StatusCode === void 0 ? void 0 : HttpConstant_1.StatusCode.HTTP_OK,
+            status: HttpConstant_1.Status.STATUS_TRUE,
+            message: MessageConstant_1.MessageConstant.DATA_RETRIEVED_SUCCESSFULLY,
+            status_code: HttpConstant_1.StatusCode.HTTP_OK,
         };
     }
     deleteUser(id) {
@@ -71,7 +71,7 @@ __decorate([
     (0, graphql_1.Mutation)(() => user_response_1.UserQueryResponse),
     __param(0, (0, graphql_1.Args)('signUp')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [user_login_dto_1.SignUp]),
+    __metadata("design:paramtypes", [auth_input_1.UserInput]),
     __metadata("design:returntype", Promise)
 ], AuthResolver.prototype, "signUp", null);
 __decorate([

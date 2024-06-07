@@ -1,11 +1,11 @@
 import { User } from './user.entity';
 import { AuthService } from './user.service';
 import { UserQueryResponse } from './user.response';
-import { SignUp } from './dto/user-login.dto';
+import { UserInput } from './dto/auth.input';
 export declare class AuthResolver {
     private readonly authService;
     constructor(authService: AuthService);
-    signUp(signUpInput: SignUp): Promise<{
+    signUp(signUpInput: UserInput): Promise<void | {
         data: any[];
         status: boolean;
         message: string;

@@ -1,10 +1,11 @@
-import type { NestApplicationOptions } from '@nestjs/common';
+import { NestApplicationOptions, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-
 import { AppModule } from './app.module';
 
 export async function server(options?: NestApplicationOptions) {
-  return NestFactory.create(AppModule, options);
+  const app = await NestFactory.create(AppModule, options);
+  app.useGlobalPipes(new ValidationPipe());
+  return app;
 }
 
 if (require.main === module) {

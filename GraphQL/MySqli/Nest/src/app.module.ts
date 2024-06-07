@@ -8,7 +8,6 @@ import { join } from 'node:path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import loadORM from './config/orm.config';
-import { TodoModule } from './todo/todo.module';
 import { UserModule } from './graphql/auth/user.module';
 
 @Module({

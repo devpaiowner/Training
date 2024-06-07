@@ -28,11 +28,11 @@ type Query {
 }
 
 type Mutation {
-  signUp(signUp: SignUp!): UserQueryResponse!
+  signUp(signUp: UserInput!): UserQueryResponse!
   deleteUser(id: ID!): User!
 }
 
-input SignUp {
+input UserInput {
   username: String!
   email: String!
   password: String!

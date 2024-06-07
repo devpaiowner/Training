@@ -12,6 +12,9 @@ export class UserQueryResponse {
   @Field()
   message: string;
 
+  @Field({ nullable: true })
+  error?: string;
+
   @Field(() => Int)
   status_code: number;
 }
