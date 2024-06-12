@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserQueryResponse = void 0;
+exports.UserLoginResponse = exports.UserQueryResponse = void 0;
 const graphql_1 = require("@nestjs/graphql");
 const user_entity_1 = require("./user.entity");
 let UserQueryResponse = class UserQueryResponse {
@@ -27,6 +27,10 @@ __decorate([
     __metadata("design:type", String)
 ], UserQueryResponse.prototype, "message", void 0);
 __decorate([
+    (0, graphql_1.Field)({ nullable: true }),
+    __metadata("design:type", String)
+], UserQueryResponse.prototype, "error", void 0);
+__decorate([
     (0, graphql_1.Field)(() => graphql_1.Int),
     __metadata("design:type", Number)
 ], UserQueryResponse.prototype, "status_code", void 0);
@@ -34,4 +38,34 @@ UserQueryResponse = __decorate([
     (0, graphql_1.ObjectType)()
 ], UserQueryResponse);
 exports.UserQueryResponse = UserQueryResponse;
+let UserLoginResponse = class UserLoginResponse {
+};
+__decorate([
+    (0, graphql_1.Field)(() => user_entity_1.User),
+    __metadata("design:type", user_entity_1.User)
+], UserLoginResponse.prototype, "data", void 0);
+__decorate([
+    (0, graphql_1.Field)({ nullable: true }),
+    __metadata("design:type", String)
+], UserLoginResponse.prototype, "token", void 0);
+__decorate([
+    (0, graphql_1.Field)(),
+    __metadata("design:type", Boolean)
+], UserLoginResponse.prototype, "status", void 0);
+__decorate([
+    (0, graphql_1.Field)(),
+    __metadata("design:type", String)
+], UserLoginResponse.prototype, "message", void 0);
+__decorate([
+    (0, graphql_1.Field)({ nullable: true }),
+    __metadata("design:type", String)
+], UserLoginResponse.prototype, "error", void 0);
+__decorate([
+    (0, graphql_1.Field)(() => graphql_1.Int),
+    __metadata("design:type", Number)
+], UserLoginResponse.prototype, "status_code", void 0);
+UserLoginResponse = __decorate([
+    (0, graphql_1.ObjectType)()
+], UserLoginResponse);
+exports.UserLoginResponse = UserLoginResponse;
 //# sourceMappingURL=user.response.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"commonConfig.js","sourceRoot":"","sources":["../../src/constants/commonConfig.ts"],"names":[],"mappings":";;;AAAa,QAAA,YAAY,GAAG;IAC1B,YAAY,EAAE,cAAc;CAC7B,CAAA"}
+{"version":3,"file":"commonConfig.js","sourceRoot":"","sources":["../../src/constants/commonConfig.ts"],"names":[],"mappings":";;;AAAa,QAAA,YAAY,GAAG;IAC1B,YAAY,EAAE,cAAc;IAC5B,OAAO,EAAC,gBAAgB;CACzB,CAAA"}

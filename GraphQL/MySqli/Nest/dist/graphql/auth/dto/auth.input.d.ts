@@ -3,3 +3,7 @@ export declare class UserInput {
     email: string;
     password: string;
 }
+export declare class UserLoginInput {
+    email: string;
+    password: string;
+}

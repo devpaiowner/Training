@@ -20,6 +20,16 @@ type UserQueryResponse {
   data: [User!]!
   status: Boolean!
   message: String!
+  error: String
+  status_code: Int!
+}
+
+type UserLoginResponse {
+  data: User!
+  token: String
+  status: Boolean!
+  message: String!
+  error: String
   status_code: Int!
 }
 
@@ -29,11 +39,17 @@ type Query {
 
 type Mutation {
   signUp(signUp: UserInput!): UserQueryResponse!
+  signIn(signIn: UserLoginInput!): UserLoginResponse!
   deleteUser(id: ID!): User!
 }
 
 input UserInput {
   username: String!
+  email: String!
+  password: String!
+}
+
+input UserLoginInput {
   email: String!
   password: String!
 }

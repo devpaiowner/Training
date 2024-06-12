@@ -18,3 +18,25 @@ export class UserQueryResponse {
   @Field(() => Int)
   status_code: number;
 }
+
+
+@ObjectType()
+export class UserLoginResponse {
+  @Field(() => User)
+  data: User;
+
+  @Field({ nullable: true })
+  token: String;
+
+  @Field()
+  status: boolean;
+
+  @Field()
+  message: string;
+
+  @Field({ nullable: true })
+  error?: string;
+
+  @Field(() => Int)
+  status_code: number;
+}
