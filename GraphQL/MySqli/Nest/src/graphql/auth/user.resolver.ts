@@ -3,10 +3,10 @@ import { User } from './user.entity';
 import { AuthService } from './user.service';
 import { MessageConstant } from 'src/constants/MessageConstant';
 import * as bcrypt from 'bcrypt';
-import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken";
 import { CommonConfig, Status, StatusCode } from 'src/constants/HttpConstant';
 import { UserLoginResponse, UserQueryResponse } from './user.response';
-import { UserInput, UserLoginInput } from './dto/auth.input';
+import { UserSignupInput, UserLoginInput } from './dto/auth.input';
 import { commonConfig } from 'src/constants/commonConfig';
 import { JWTKeyData } from 'src/Utils/JSONHelper';
 
@@ -15,7 +15,7 @@ export class AuthResolver {
   constructor(private readonly authService: AuthService) { }
 
   @Mutation(() => UserQueryResponse)
-  async signUp(@Args('signUp') signUpInput: UserInput): Promise<UserQueryResponse> {
+  async signUp(@Args('signUp') signUpInput: UserSignupInput): Promise<UserQueryResponse> {
     const { username, email, password } = signUpInput;
     try {
       const userExist = await this.authService.findOneByEmail(email);
@@ -50,7 +50,9 @@ export class AuthResolver {
   async signIn(@Args('signIn') signInInput: UserLoginInput): Promise<UserLoginResponse> {
     const { email, password } = signInInput;
     try {
-      const userExist = await this.authService.findOneByEmail(email);
+      const userExist: any = await this.authService.findOneByEmail(email);
+      console.log('userExist', userExist);
+
       if (!userExist) {
         return {
           data: null,
@@ -61,9 +63,8 @@ export class AuthResolver {
         };
       } else {
         const validate_password = await bcrypt.compare(password, userExist.password);
-        const token = await jwt.sign(JWTKeyData(userExist), commonConfig?.JWT_KEY)
-        console.log('token', token);
-
+        const token = await jwt.sign(userExist, commonConfig?.JWT_KEY)
+        this.authService.sessionCreate(userExist?.id, token);
         if (validate_password) {
           return {
             data: userExist,

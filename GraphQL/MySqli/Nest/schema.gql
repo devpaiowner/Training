@@ -25,7 +25,7 @@ type UserQueryResponse {
 }
 
 type UserLoginResponse {
-  data: User!
+  data: User
   token: String
   status: Boolean!
   message: String!
@@ -38,12 +38,12 @@ type Query {
 }
 
 type Mutation {
-  signUp(signUp: UserInput!): UserQueryResponse!
+  signUp(signUp: UserSignupInput!): UserQueryResponse!
   signIn(signIn: UserLoginInput!): UserLoginResponse!
   deleteUser(id: ID!): User!
 }
 
-input UserInput {
+input UserSignupInput {
   username: String!
   email: String!
   password: String!

@@ -3,7 +3,7 @@ import { IsEmail, IsNotEmpty, Length, Matches } from 'class-validator';
 import { ValidationMessageConstant } from 'src/constants/MessageConstant';
 
 @InputType()
-export class UserInput {
+export class UserSignupInput {
   @Field()
   @IsNotEmpty({ message: `Username ${ValidationMessageConstant?.SHOULD_NOT_EMPTY}` })
   @Length(4, 20, { message: 'Username must be between 4 and 20 characters' })

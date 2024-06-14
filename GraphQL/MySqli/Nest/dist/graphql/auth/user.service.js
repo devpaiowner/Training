@@ -17,13 +17,19 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const user_entity_1 = require("./user.entity");
+const session_entity_1 = require("./session.entity");
 let AuthService = class AuthService {
-    constructor(userRepository) {
+    constructor(userRepository, sessionRepository) {
         this.userRepository = userRepository;
+        this.sessionRepository = sessionRepository;
     }
     createOne(username, email, password) {
         const signup = this.userRepository.create({ username, email, password });
         return this.userRepository.save(signup);
+    }
+    sessionCreate(userid, token) {
+        const session = this.sessionRepository.create({ userid, token });
+        return this.sessionRepository.save(session);
     }
     async getOne(id) {
         const signup = await this.userRepository.findOneBy({ id });
@@ -46,7 +52,9 @@ let AuthService = class AuthService {
 AuthService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, typeorm_1.InjectRepository)(user_entity_1.User)),
-    __metadata("design:paramtypes", [typeorm_2.Repository])
+    __param(1, (0, typeorm_1.InjectRepository)(session_entity_1.Session)),
+    __metadata("design:paramtypes", [typeorm_2.Repository,
+        typeorm_2.Repository])
 ], AuthService);
 exports.AuthService = AuthService;
 //# sourceMappingURL=user.service.js.map

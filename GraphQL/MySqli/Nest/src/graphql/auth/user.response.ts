@@ -22,8 +22,8 @@ export class UserQueryResponse {
 
 @ObjectType()
 export class UserLoginResponse {
-  @Field(() => User)
-  data: User;
+  @Field(() => User, { nullable: true })
+  data?: {User};
 
   @Field({ nullable: true })
   token: String;

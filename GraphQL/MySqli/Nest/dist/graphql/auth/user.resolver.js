@@ -23,7 +23,6 @@ const HttpConstant_1 = require("../../constants/HttpConstant");
 const user_response_1 = require("./user.response");
 const auth_input_1 = require("./dto/auth.input");
 const commonConfig_1 = require("../../constants/commonConfig");
-const JSONHelper_1 = require("../../Utils/JSONHelper");
 let AuthResolver = class AuthResolver {
     constructor(authService) {
         this.authService = authService;
@@ -64,6 +63,7 @@ let AuthResolver = class AuthResolver {
         const { email, password } = signInInput;
         try {
             const userExist = await this.authService.findOneByEmail(email);
+            console.log('userExist', userExist);
             if (!userExist) {
                 return {
                     data: null,
@@ -75,8 +75,8 @@ let AuthResolver = class AuthResolver {
             }
             else {
                 const validate_password = await bcrypt.compare(password, userExist.password);
-                const token = await jsonwebtoken_1.default.sign((0, JSONHelper_1.JWTKeyData)(userExist), commonConfig_1.commonConfig === null || commonConfig_1.commonConfig === void 0 ? void 0 : commonConfig_1.commonConfig.JWT_KEY);
-                console.log('token', token);
+                const token = await jsonwebtoken_1.default.sign(userExist, commonConfig_1.commonConfig === null || commonConfig_1.commonConfig === void 0 ? void 0 : commonConfig_1.commonConfig.JWT_KEY);
+                this.authService.sessionCreate(userExist === null || userExist === void 0 ? void 0 : userExist.id, token);
                 if (validate_password) {
                     return {
                         data: userExist,
@@ -134,7 +134,7 @@ __decorate([
     (0, graphql_1.Mutation)(() => user_response_1.UserQueryResponse),
     __param(0, (0, graphql_1.Args)('signUp')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [auth_input_1.UserInput]),
+    __metadata("design:paramtypes", [auth_input_1.UserSignupInput]),
     __metadata("design:returntype", Promise)
 ], AuthResolver.prototype, "signUp", null);
 __decorate([

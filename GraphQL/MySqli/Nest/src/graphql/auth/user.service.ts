@@ -2,18 +2,25 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
-import { UserInput } from './dto/auth.input';
+import { Session } from './session.entity';
 
 @Injectable()
 export class AuthService {
   constructor(
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
+    @InjectRepository(Session)
+    private readonly sessionRepository: Repository<Session>,
   ) { }
 
   createOne(username: string, email: string, password: string) {
     const signup = this.userRepository.create({ username, email, password });
     return this.userRepository.save(signup);
+  }
+
+  sessionCreate(userid: string, token: string) {
+    const session = this.sessionRepository.create({ userid, token });
+    return this.sessionRepository.save(session);
   }
 
   async getOne(id: User['id']) {

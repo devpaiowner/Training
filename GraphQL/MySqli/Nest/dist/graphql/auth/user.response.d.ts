@@ -7,7 +7,9 @@ export declare class UserQueryResponse {
     status_code: number;
 }
 export declare class UserLoginResponse {
-    data: User;
+    data?: {
+        User: any;
+    };
     token: String;
     status: boolean;
     message: string;

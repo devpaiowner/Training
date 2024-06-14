@@ -1,4 +1,4 @@
-export declare class UserInput {
+export declare class UserSignupInput {
     username: string;
     email: string;
     password: string;

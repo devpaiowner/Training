@@ -41,8 +41,8 @@ exports.UserQueryResponse = UserQueryResponse;
 let UserLoginResponse = class UserLoginResponse {
 };
 __decorate([
-    (0, graphql_1.Field)(() => user_entity_1.User),
-    __metadata("design:type", user_entity_1.User)
+    (0, graphql_1.Field)(() => user_entity_1.User, { nullable: true }),
+    __metadata("design:type", Object)
 ], UserLoginResponse.prototype, "data", void 0);
 __decorate([
     (0, graphql_1.Field)({ nullable: true }),
